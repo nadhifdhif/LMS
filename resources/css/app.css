@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#sidebar.collapsed {
+    width: 4rem;
+}
+
+#sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+/* Hover sementara saat collapsed */
+
+#sidebar.collapsed:hover {
+    width: 16rem;
+}
+
+#sidebar.collapsed:hover .sidebar-text {
+    display: inline;
+}
+
+/* collapse state */
+#sidebar.collapsed {
+    width: 4rem;
+}
+
+/* sembunyikan teks saat collapse */
+#sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+/* hover sementara saat collapsed */
+#sidebar.collapsed:hover {
+    width: 16rem;
+}
+
+#sidebar.collapsed:hover .sidebar-text {
+    display: inline;
+}
