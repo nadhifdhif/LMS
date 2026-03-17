@@ -35,17 +35,18 @@
                 ☰
             </button>
 
-            @isset($header)
+            <!-- Title (opsional) -->
+            @hasSection('title')
                 <div class="text-lg font-semibold">
-                    {{ $header }}
+                    @yield('title')
                 </div>
-            @endisset
+            @endif
 
         </header>
 
         <!-- Page Content -->
         <main class="p-6">
-            {{ $slot }}
+            @yield('content')
         </main>
 
     </div>
@@ -85,15 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-});
-</script>
-
-<script>
-const sidebar = document.getElementById("sidebar");
-const toggleBtn = document.getElementById("toggleSidebar");
-
-toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("collapsed");
 });
 </script>
 

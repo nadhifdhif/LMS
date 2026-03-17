@@ -1,10 +1,8 @@
-<x-app-layout>
+@extends('layouts.app')
 
-<x-slot name="header">
-    <h2 class="text-xl font-semibold text-gray-800">
-        Dashboard
-    </h2>
-</x-slot>
+@section('title', 'Dashboard')
+
+@section('content')
 
 <div class="space-y-6">
 
@@ -56,7 +54,6 @@
 <!-- MAIN GRID -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-
 <!-- ACTIVE COURSES -->
 <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border p-6">
 
@@ -64,7 +61,7 @@
         <h3 class="font-semibold text-gray-800">
             Active Courses
         </h3>
-        <a href="#" class="text-sm text-blue-600 hover:underline">
+        <a href="/courses" class="text-sm text-blue-600 hover:underline">
             View all
         </a>
     </div>
@@ -73,14 +70,9 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">
-                    Web Development
-                </p>
-                <p class="text-sm text-gray-500">
-                    18 students enrolled
-                </p>
+                <p class="font-medium text-gray-800">Web Development</p>
+                <p class="text-sm text-gray-500">18 students enrolled</p>
             </div>
-
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
                 Active
             </span>
@@ -88,14 +80,9 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">
-                    Machine Learning
-                </p>
-                <p class="text-sm text-gray-500">
-                    12 students enrolled
-                </p>
+                <p class="font-medium text-gray-800">Machine Learning</p>
+                <p class="text-sm text-gray-500">12 students enrolled</p>
             </div>
-
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
                 Active
             </span>
@@ -103,14 +90,9 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">
-                    Data Science
-                </p>
-                <p class="text-sm text-gray-500">
-                    9 students enrolled
-                </p>
+                <p class="font-medium text-gray-800">Data Science</p>
+                <p class="text-sm text-gray-500">9 students enrolled</p>
             </div>
-
             <span class="text-sm bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
                 Ongoing
             </span>
@@ -134,14 +116,9 @@
             <div class="bg-blue-100 p-2 rounded-full">
                 <x-heroicon-o-user-plus class="w-4 h-4 text-blue-600"/>
             </div>
-
             <div>
-                <p class="text-gray-700">
-                    John joined Web Development
-                </p>
-                <p class="text-gray-400 text-xs">
-                    2 hours ago
-                </p>
+                <p class="text-gray-700">John joined Web Development</p>
+                <p class="text-gray-400 text-xs">2 hours ago</p>
             </div>
         </div>
 
@@ -149,14 +126,9 @@
             <div class="bg-purple-100 p-2 rounded-full">
                 <x-heroicon-o-code-bracket class="w-4 h-4 text-purple-600"/>
             </div>
-
             <div>
-                <p class="text-gray-700">
-                    New commit pushed to ML project
-                </p>
-                <p class="text-gray-400 text-xs">
-                    5 hours ago
-                </p>
+                <p class="text-gray-700">New commit pushed to ML project</p>
+                <p class="text-gray-400 text-xs">5 hours ago</p>
             </div>
         </div>
 
@@ -164,21 +136,15 @@
             <div class="bg-green-100 p-2 rounded-full">
                 <x-heroicon-o-check-circle class="w-4 h-4 text-green-600"/>
             </div>
-
             <div>
-                <p class="text-gray-700">
-                    Assignment graded
-                </p>
-                <p class="text-gray-400 text-xs">
-                    Yesterday
-                </p>
+                <p class="text-gray-700">Assignment graded</p>
+                <p class="text-gray-400 text-xs">Yesterday</p>
             </div>
         </div>
 
     </div>
 
 </div>
-
 
 </div>
 
@@ -226,7 +192,6 @@
 
 </div>
 
-
 </div>
 
-</x-app-layout>
+@endsection
