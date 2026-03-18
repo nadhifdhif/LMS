@@ -2,39 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-#sidebar.collapsed {
-    width: 4rem;
+
+/* =========================
+   DEFAULT (COLLAPSED)
+========================= */
+#sidebar {
+    width: 4rem; /* w-16 */
 }
 
-#sidebar.collapsed .sidebar-text {
+#sidebar .sidebar-text {
     display: none;
 }
 
-/* Hover sementara saat collapsed */
 
-#sidebar.collapsed:hover {
-    width: 16rem;
+/* =========================
+   HOVER (ONLY IF NOT PINNED)
+========================= */
+#sidebar:not(.pinned):hover {
+    width: 16rem; /* w-64 */
 }
 
-#sidebar.collapsed:hover .sidebar-text {
+#sidebar:not(.pinned):hover .sidebar-text {
     display: inline;
 }
 
-/* collapse state */
-#sidebar.collapsed {
-    width: 4rem;
+#sidebar:not(.pinned):hover ~ #mainContent {
+    margin-left: 16rem;
 }
 
-/* sembunyikan teks saat collapse */
-#sidebar.collapsed .sidebar-text {
-    display: none;
-}
 
-/* hover sementara saat collapsed */
-#sidebar.collapsed:hover {
+/* =========================
+   PINNED STATE (CLICK)
+========================= */
+#sidebar.pinned {
     width: 16rem;
 }
 
-#sidebar.collapsed:hover .sidebar-text {
+#sidebar.pinned .sidebar-text {
     display: inline;
+}
+
+#sidebar.pinned ~ #mainContent {
+    margin-left: 16rem;
+}
+
+
+/* =========================
+   🔥 ANTI-FLICKER INIT STATE
+========================= */
+.sidebar-pinned #sidebar {
+    width: 16rem;
+}
+
+.sidebar-pinned #sidebar .sidebar-text {
+    display: inline;
+}
+
+.sidebar-pinned #mainContent {
+    margin-left: 16rem;
+}
+
+
+/* =========================
+   OPTIONAL (SMOOTH TEXT)
+========================= */
+.sidebar-text {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#sidebar:hover .sidebar-text,
+#sidebar.pinned .sidebar-text,
+.sidebar-pinned #sidebar .sidebar-text {
+    opacity: 1;
 }

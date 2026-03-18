@@ -1,10 +1,12 @@
-<x-app-layout>
+@extends('layouts.app')
 
-<x-slot name="header">
+@section('header')
     <h2 class="text-xl font-semibold text-gray-800">
         Dashboard
     </h2>
-</x-slot>
+@endsection
+
+@section('content')
 
 <div class="space-y-6">
 
@@ -55,7 +57,6 @@
 
 <!-- MAIN GRID -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
 
 <!-- ACTIVE COURSES -->
 <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border p-6">
@@ -179,7 +180,6 @@
 
 </div>
 
-
 </div>
 
 
@@ -226,7 +226,6 @@
 
 </div>
 
-
 </div>
 
-</x-app-layout>
+@endsection
