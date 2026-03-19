@@ -23,26 +23,27 @@ transition-all duration-300 overflow-hidden z-40 flex flex-col">
             </li>
 
             <li>
-                <a href="{{ route('courses') }}"
+                <a href="{{ route('courses.index') }}"
                    class="flex items-center gap-3 p-3 rounded-lg transition
-                   {{ request()->routeIs('courses*') ? 'bg-gray-800' : 'hover:bg-gray-800' }}">
+                   {{ request()->routeIs('courses.*') ? 'bg-gray-800' : 'hover:bg-gray-800' }}">
                     <x-heroicon-o-academic-cap class="w-6 h-6 shrink-0"/>
                     <span class="sidebar-text whitespace-nowrap">Courses</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('users') }}"
+                <a href="{{ route('users.index') }}"
                    class="flex items-center gap-3 p-3 rounded-lg transition
-                   {{ request()->routeIs('students*') ? 'bg-gray-800' : 'hover:bg-gray-800' }}">
+                   {{ request()->routeIs('users.*') ? 'bg-gray-800' : 'hover:bg-gray-800' }}">
                     <x-heroicon-o-user-group class="w-6 h-6 shrink-0"/>
                     <span class="sidebar-text whitespace-nowrap">Users</span>
                 </a>
             </li>
 
             <li>
-                <a href="#"
-                   class="flex items-center gap-3 p-3 rounded-lg transition hover:bg-gray-800">
+                <a href="{{ route('reports.index') }}"
+                   class="flex items-center gap-3 p-3 rounded-lg transition
+                   {{ request()->routeIs('reports.*') ? 'bg-gray-800' : 'hover:bg-gray-800' }}">
                     <x-heroicon-o-chart-bar class="w-6 h-6 shrink-0"/>
                     <span class="sidebar-text whitespace-nowrap">Reports</span>
                 </a>
