@@ -19,10 +19,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('courses.index');
     })->name('courses');
 
-    Route::get('/students', function () {
-        return view('students.index');
-    })->name('students');
-
+    Route::get('/users', function () {
+        return view('users.index');
+    })->name('users');
 });
 
 /* Profile */
