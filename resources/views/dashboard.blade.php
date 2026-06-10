@@ -171,7 +171,7 @@
                     Assignment graded
                 </p>
                 <p class="text-gray-400 text-xs">
-                    Yesterday
+                    Today
                 </p>
             </div>
         </div>
