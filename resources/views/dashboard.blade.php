@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
-@section('header')
-    <h2 class="text-xl font-semibold text-gray-800">
-        Dashboard
-    </h2>
-@endsection
+@section('title', 'Dashboard')
 
 @section('content')
 
@@ -65,7 +61,7 @@
         <h3 class="font-semibold text-gray-800">
             Active Courses
         </h3>
-        <a href="#" class="text-sm text-blue-600 hover:underline">
+        <a href="/courses" class="text-sm text-blue-600 hover:underline">
             View all
         </a>
     </div>
@@ -74,14 +70,9 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">
-                    Web Development
-                </p>
-                <p class="text-sm text-gray-500">
-                    67 students enrolled
-                </p>
+                <p class="font-medium text-gray-800">Web Development</p>
+                <p class="text-sm text-gray-500">18 students enrolled</p>
             </div>
-
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
                 Active
             </span>
@@ -89,14 +80,9 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">
-                    Machine Learning
-                </p>
-                <p class="text-sm text-gray-500">
-                    69 students enrolled
-                </p>
+                <p class="font-medium text-gray-800">Machine Learning</p>
+                <p class="text-sm text-gray-500">12 students enrolled</p>
             </div>
-
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
                 Active
             </span>
@@ -111,7 +97,6 @@
                     19 students enrolled
                 </p>
             </div>
-
             <span class="text-sm bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
                 Ongoing
             </span>
@@ -135,14 +120,9 @@
             <div class="bg-blue-100 p-2 rounded-full">
                 <x-heroicon-o-user-plus class="w-4 h-4 text-blue-600"/>
             </div>
-
             <div>
-                <p class="text-gray-700">
-                    John joined Web Development
-                </p>
-                <p class="text-gray-400 text-xs">
-                    2 hours ago
-                </p>
+                <p class="text-gray-700">John joined Web Development</p>
+                <p class="text-gray-400 text-xs">2 hours ago</p>
             </div>
         </div>
 
@@ -150,14 +130,9 @@
             <div class="bg-purple-100 p-2 rounded-full">
                 <x-heroicon-o-code-bracket class="w-4 h-4 text-purple-600"/>
             </div>
-
             <div>
-                <p class="text-gray-700">
-                    New commit pushed to ML project
-                </p>
-                <p class="text-gray-400 text-xs">
-                    5 hours ago
-                </p>
+                <p class="text-gray-700">New commit pushed to ML project</p>
+                <p class="text-gray-400 text-xs">5 hours ago</p>
             </div>
         </div>
 
@@ -165,7 +140,6 @@
             <div class="bg-green-100 p-2 rounded-full">
                 <x-heroicon-o-check-circle class="w-4 h-4 text-green-600"/>
             </div>
-
             <div>
                 <p class="text-gray-700">
                     Assignment graded
