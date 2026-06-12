@@ -78,7 +78,7 @@
                     Web Development
                 </p>
                 <p class="text-sm text-gray-500">
-                    18 students enrolled
+                    67 students enrolled
                 </p>
             </div>
 
@@ -93,7 +93,7 @@
                     Machine Learning
                 </p>
                 <p class="text-sm text-gray-500">
-                    12 students enrolled
+                    69 students enrolled
                 </p>
             </div>
 
@@ -108,7 +108,7 @@
                     Data Science
                 </p>
                 <p class="text-sm text-gray-500">
-                    9 students enrolled
+                    19 students enrolled
                 </p>
             </div>
 
