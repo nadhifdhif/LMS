@@ -3,12 +3,20 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/* Home */
+/*
+|--------------------------------------------------------------------------
+| Home
+|--------------------------------------------------------------------------
+*/
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
-/* App */
+/*
+|--------------------------------------------------------------------------
+| App (Protected)
+|--------------------------------------------------------------------------
+*/
 Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/dashboard', function () {
@@ -17,15 +25,23 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/courses', function () {
         return view('courses.index');
-    })->name('courses');
+    })->name('courses.index');
 
-    Route::get('/students', function () {
-        return view('students.index');
-    })->name('students');
+    Route::get('/users', function () {
+        return view('users.index');
+    })->name('users.index');
 
+    // ✅ NEW: Reports
+    Route::get('/reports', function () {
+        return view('reports.index');
+    })->name('reports.index');
 });
 
-/* Profile */
+/*
+|--------------------------------------------------------------------------
+| Profile
+|--------------------------------------------------------------------------
+*/
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,7 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 });
 
 require __DIR__.'/auth.php';

@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- 🔥 ANTI FLICKER (WAJIB) -->
+    <script>
+        if (localStorage.getItem("sidebarPinned") === "true") {
+            document.documentElement.classList.add("sidebar-pinned");
+        }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,14 +25,14 @@
 
 <body class="font-sans antialiased bg-gray-100">
 
-<div class="flex min-h-screen">
+<div class="min-h-screen">
 
     <!-- Sidebar -->
     @include('layouts.sidebar')
 
     <!-- Main Content -->
     <div id="mainContent"
-         class="flex-1 ml-64 transition-all duration-300">
+         class="ml-16 transition-all duration-300 overflow-x-hidden min-h-screen">
 
         <!-- Header -->
         <header class="bg-white shadow flex items-center px-6 py-4">
@@ -35,12 +43,7 @@
                 ☰
             </button>
 
-            <!-- Title (opsional) -->
-            @hasSection('title')
-                <div class="text-lg font-semibold">
-                    @yield('title')
-                </div>
-            @endif
+            @yield('header')
 
         </header>
 
@@ -59,29 +62,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.getElementById("toggleSidebar");
     const sidebar = document.getElementById("sidebar");
     const main = document.getElementById("mainContent");
-    const texts = document.querySelectorAll(".menu-text");
+
+    // 🔥 SYNC STATE (biar class konsisten setelah load)
+    if (localStorage.getItem("sidebarPinned") === "true") {
+        sidebar.classList.add("pinned");
+        main.classList.remove("ml-16");
+        main.classList.add("ml-64");
+    }
 
     toggleBtn.addEventListener("click", function () {
 
-        const collapsed = sidebar.classList.contains("w-16");
+        sidebar.classList.toggle("pinned");
 
-        if (collapsed) {
-            sidebar.classList.remove("w-16");
-            sidebar.classList.add("w-64");
+        const isPinned = sidebar.classList.contains("pinned");
 
+        // simpan state
+        localStorage.setItem("sidebarPinned", isPinned);
+
+        // 🔥 sync ke root (anti flicker next load)
+        document.documentElement.classList.toggle("sidebar-pinned", isPinned);
+
+        if (isPinned) {
             main.classList.remove("ml-16");
             main.classList.add("ml-64");
-
-            texts.forEach(el => el.classList.remove("hidden"));
-
         } else {
-            sidebar.classList.remove("w-64");
-            sidebar.classList.add("w-16");
-
             main.classList.remove("ml-64");
             main.classList.add("ml-16");
-
-            texts.forEach(el => el.classList.add("hidden"));
         }
 
     });

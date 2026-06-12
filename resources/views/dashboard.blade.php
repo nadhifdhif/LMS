@@ -90,8 +90,12 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">Data Science</p>
-                <p class="text-sm text-gray-500">9 students enrolled</p>
+                <p class="font-medium text-gray-800">
+                    Data Science
+                </p>
+                <p class="text-sm text-gray-500">
+                    19 students enrolled
+                </p>
             </div>
             <span class="text-sm bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
                 Ongoing
@@ -137,8 +141,12 @@
                 <x-heroicon-o-check-circle class="w-4 h-4 text-green-600"/>
             </div>
             <div>
-                <p class="text-gray-700">Assignment graded</p>
-                <p class="text-gray-400 text-xs">Yesterday</p>
+                <p class="text-gray-700">
+                    Assignment graded
+                </p>
+                <p class="text-gray-400 text-xs">
+                    Today
+                </p>
             </div>
         </div>
 
