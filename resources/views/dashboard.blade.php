@@ -132,7 +132,7 @@
             </div>
             <div>
                 <p class="text-gray-700">New commit pushed to ML project</p>
-                <p class="text-gray-400 text-xs">5 hours ago</p>
+                <p class="text-gray-400 text-xs">3 hours ago</p>
             </div>
         </div>
 
