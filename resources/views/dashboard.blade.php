@@ -26,7 +26,7 @@
         <div class="flex items-center justify-between">
             <div>
                 <p class="text-gray-500 text-sm">Repositories</p>
-                <p class="text-3xl font-bold mt-1">12</p>
+                <p class="text-3xl font-bold mt-1">42</p>
             </div>
 
             <div class="bg-purple-100 p-3 rounded-lg">
