@@ -80,7 +80,7 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">Machine Learning</p>
+                <p class="font-medium text-gray-800">Fundamental of Electronics Circuits</p>
                 <p class="text-sm text-gray-500">12 students enrolled</p>
             </div>
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
