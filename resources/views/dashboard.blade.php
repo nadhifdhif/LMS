@@ -26,7 +26,7 @@
         <div class="flex items-center justify-between">
             <div>
                 <p class="text-gray-500 text-sm">Repositories</p>
-                <p class="text-3xl font-bold mt-1">12</p>
+                <p class="text-3xl font-bold mt-1">42</p>
             </div>
 
             <div class="bg-purple-100 p-3 rounded-lg">
@@ -80,7 +80,7 @@
 
         <div class="flex items-center justify-between p-4 border rounded-lg">
             <div>
-                <p class="font-medium text-gray-800">Machine Learning</p>
+                <p class="font-medium text-gray-800">Fundamental of Electronics Circuits</p>
                 <p class="text-sm text-gray-500">12 students enrolled</p>
             </div>
             <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
